@@ -1,0 +1,56 @@
+# Define a class named "Person"
+class Person:
+    # Constructor method (initializer)
+    def __init__(self, name, age):
+        self.vorname = name
+        self.age = age
+
+    # Instance method to introduce the person
+    def introduce(self):
+        return f"Hello, my name is {self.vorname}, and I am {self.age} years old."
+
+    # Instance method to check if the person is an adult
+    def is_adult(self):
+        return self.age >= 18
+
+# Create instances (objects) of the "Person" class
+person1 = Person("Alice", 30)
+person2 = Person("Bob", 17)
+
+''' Access attributes and call methods on instances
+#print(person1.name)  # Output: "Alice"
+print(person2.introduce())  # Output: "Hello, my name is Bob, and I am 17 years old."
+
+# Check if a person is an adult
+print(person1.is_adult())  # Output: True
+print(person2.is_adult())  # Output: False
+#'''
+
+class Wizard:
+
+    def __init__(self,name, lvl, mana):
+        self.name = name
+        self.lvl = lvl 
+        self. mana = mana
+      
+
+wizard1 = Wizard("gandalf", 23, 2333)
+
+
+
+#create wizard list
+
+def wizard_list():
+    wizards = []
+
+    for i in range(2, 22):
+        name = f"wizard{i}"
+        lvl = 20 + i**2
+        mana = 230 + i ** i/100
+        wizard = Wizard(name, lvl, mana)
+        wizards.append(wizard)
+
+    for wizard in wizards:
+        print(f"Name: {wizard.name}, Level: {wizard.lvl}, Mana: {wizard.mana}")
+
+wizard_list()
